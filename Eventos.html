@@ -7,14 +7,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-azul-oscuro fixed-top">
   <div class="container"> 
     <a class="navbar-brand" href="index.html">
       <h1 class="m-0 d-flex align-items-center">
-        <img src="img/logoInfa.jpg" alt="INFAN" style="height: 50px; width: 50px; border-radius: 25%; margin-right: 10px;">
+        <img src="img/logoInfa.jpg" 
+             alt="INFAN" 
+             style="height: 50px; width: 50px; border-radius: 25%; margin-right: 10px; vertical-align: middle;">
         INFAN
       </h1>
     </a>
@@ -24,15 +26,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="Nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link active" href="Nosotros.html">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="Programas.html">Programas</a></li>
         <li class="nav-item"><a class="nav-link" href="Admisiones.html">Admisiones</a></li>
-        <li class="nav-item"><a class="nav-link active" href="Eventos.html">Eventos</a></li>
+        <li class="nav-item"><a class="nav-link" href="Eventos.html">Eventos</a></li>
         <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
         <li class="nav-item ms-3">
-          <button class="btn btn-outline-light btn-sm" id="darkModeToggle">
+          <li class="nav-item ms-3 d-flex align-items-center">
+              <button class="btn btn-outline-light btn-sm" id="darkModeToggle">
             <i class="bi bi-moon-fill"></i>
-          </button>
+        </button>
+       </li>
+
         </li>
       </ul>
     </div>
@@ -49,30 +54,28 @@
 </section>
 
 <section class="container mb-5">
-  <!-- Filtros -->
   <div class="filtros-container" data-aos="fade-up">
-    <h3 class="text-center mb-4">Filtrar por categoría</h3>
+    <h3 class="text-center mb-4">Categoría</h3>
     <div class="text-center">
       <button class="btn btn-filter active" data-filter="all">Todos</button>
       <button class="btn btn-filter" data-filter="graduaciones">Graduaciones</button>
-      <button class="btn btn-filter" data-filter="dia-alumno">Día del Alumno</button>
-      <button class="btn btn-filter" data-filter="medio-ambiente">Medio Ambiente</button>
-      <button class="btn btn-filter" data-filter="deportes">Deportes</button>
-      <button class="btn btn-filter" data-filter="culturales">Eventos Culturales</button>
+      <button class="btn btn-filter" data-filter="intramuros">Intramuros</button>
+      <button class="btn btn-filter" data-filter="dia-madre">Día de la Madre</button>
+      <button class="btn btn-filter" data-filter="festival-primavera">Festival de Primavera</button>
+      <button class="btn btn-filter" data-filter="dia-estudiante">Día del Estudiante</button>
+      <button class="btn btn-filter" data-filter="15-septiembre">15 de Septiembre</button>
     </div>
   </div>
   
-  <!-- Grid de eventos -->
   <div class="row" id="eventos-grid">
-    <!-- Evento 1 -->
     <div class="col-md-6 col-lg-4 mb-4" data-category="graduaciones" data-aos="fade-up">
       <div class="evento-card">
         <div class="evento-img-container">
-          <img src="https://placehold.co/600x400/1E3A8A/FFFFFF/png?text=Graduación+2023" alt="Graduación 2023">
+          <img src="img/" alt="Graduación 2023">
           <span class="evento-categoria">Graduaciones</span>
         </div>
         <div class="evento-info">
-          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i> 15 Noviembre, 2023</span></div>
+          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i>15 Septiembre, 2025 </span>2024</div>
           <h3>Ceremonia de Graduación 2023</h3>
           <p>Nuestros estudiantes celebran el fin de una etapa y el comienzo de nuevas oportunidades.</p>
           <button class="btn btn-sm btn-outline-primary ver-mas-btn" data-evento="1">Ver más</button>
@@ -80,96 +83,92 @@
       </div>
     </div>
     
-    <!-- Evento 2 -->
-    <div class="col-md-6 col-lg-4 mb-4" data-category="dia-alumno" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-md-6 col-lg-4 mb-4" data-category="intramuros" data-aos="fade-up" data-aos-delay="100">
       <div class="evento-card">
         <div class="evento-img-container">
-          <img src="https://placehold.co/600x400/1E3A8A/FFFFFF/png?text=Día+del+Alumno" alt="Día del Alumno">
-          <span class="evento-categoria">Día del Alumno</span>
+          <img src="img/" alt="Juegos Intramuros">
+          <span class="evento-categoria">Intramuros</span>
         </div>
         <div class="evento-info">
-          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i> 25 Septiembre, 2023</span></div>
-          <h3>Celebración del Día del Alumno</h3>
-          <p>Jornada de actividades recreativas y reconocimientos para nuestros estudiantes.</p>
+          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i>15 Septiembre, 2025 </span></div>
+          <h3>Juegos Intramuros 2025</h3>
+          <p>Competencias deportivas internas donde los estudiantes demuestran sus habilidades atléticas.</p>
           <button class="btn btn-sm btn-outline-primary ver-mas-btn" data-evento="2">Ver más</button>
         </div>
       </div>
     </div>
 
-    <!-- Evento 3 -->
-    <div class="col-md-6 col-lg-4 mb-4" data-category="medio-ambiente" data-aos="fade-up" data-aos-delay="200">
+    <!-- Evento 3 - Día de la Madre -->
+    <div class="col-md-6 col-lg-4 mb-4" data-category="dia-madre" data-aos="fade-up" data-aos-delay="200">
       <div class="evento-card">
         <div class="evento-img-container">
-          <img src="https://placehold.co/600x400/1E3A8A/FFFFFF/png?text=Día+Medio+Ambiente" alt="Día del Medio Ambiente">
-          <span class="evento-categoria">Medio Ambiente</span>
+          <img src="img/" alt="Día de la Madre">
+          <span class="evento-categoria">Día de la Madre</span>
         </div>
         <div class="evento-info">
-          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i> 5 Junio, 2023</span></div>
-          <h3>Día Mundial del Medio Ambiente</h3>
-          <p>Actividades de concientización y reforestación en las instalaciones del instituto.</p>
+          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i>15 Septiembre, 2025</span></div>
+          <h3>Celebración del Día de la Madre</h3>
+          <p>Homenaje a todas las madres de nuestra comunidad educativa con presentaciones especiales.</p>
           <button class="btn btn-sm btn-outline-primary ver-mas-btn" data-evento="3">Ver más</button>
         </div>
       </div>
     </div>
 
-    <!-- Evento 4 -->
-    <div class="col-md-6 col-lg-4 mb-4" data-category="deportes" data-aos="fade-up">
+    <!-- Evento 4 - Festival de Primavera -->
+    <div class="col-md-6 col-lg-4 mb-4" data-category="festival-primavera" data-aos="fade-up">
       <div class="evento-card">
         <div class="evento-img-container">
-          <img src="https://placehold.co/600x400/1E3A8A/FFFFFF/png?text=Competencia+Deportiva" alt="Competencia Deportiva">
-          <span class="evento-categoria">Deportes</span>
+          <img src="img/" alt="Festival de Primavera">
+          <span class="evento-categoria">Festival de Primavera</span>
         </div>
         <div class="evento-info">
-          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i> 12 Agosto, 2023</span></div>
-          <h3>Competencia Intercursos 2023</h3>
-          <p>Nuestros estudiantes demuestran su talento deportivo en diversas disciplinas.</p>
+          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i>15 Septiembre, 2025 </span></div>
+          <h3>Festival de la Primavera 2025</h3>
+          <p>Celebración de la llegada de la primavera con música, danza y actividades al aire libre.</p>
           <button class="btn btn-sm btn-outline-primary ver-mas-btn" data-evento="4">Ver más</button>
         </div>
       </div>
     </div>
 
-    <!-- Evento 5 -->
-    <div class="col-md-6 col-lg-4 mb-4" data-category="culturales" data-aos="fade-up" data-aos-delay="100">
+    <!-- Evento 5 - Día del Estudiante -->
+    <div class="col-md-6 col-lg-4 mb-4" data-category="dia-estudiante" data-aos="fade-up" data-aos-delay="100">
       <div class="evento-card">
         <div class="evento-img-container">
-          <img src="https://placehold.co/600x400/1E3A8A/FFFFFF/png?text=Festival+Cultural" alt="Festival Cultural">
-          <span class="evento-categoria">Culturales</span>
+          <img src="img/" alt="Día del Estudiante">
+          <span class="evento-categoria">Día del Estudiante</span>
         </div>
         <div class="evento-info">
-          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i> 20 Octubre, 2023</span></div>
-          <h3>Festival Cultural INFAN 2023</h3>
-          <p>Presentaciones artísticas, danzas y muestras del talento cultural de nuestros estudiantes.</p>
+          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i>15 Septiembre, 2025 </span></div>
+          <h3>Celebración del Día del Estudiante</h3>
+          <p>Jornada de actividades recreativas y reconocimientos para nuestros estudiantes.</p>
           <button class="btn btn-sm btn-outline-primary ver-mas-btn" data-evento="5">Ver más</button>
         </div>
       </div>
     </div>
 
-    <!-- Evento 6 -->
-    <div class="col-md-6 col-lg-4 mb-4" data-category="graduaciones" data-aos="fade-up" data-aos-delay="200">
+    <!-- Evento 6 - 15 de Septiembre -->
+    <div class="col-md-6 col-lg-4 mb-4" data-category="15-septiembre" data-aos="fade-up" data-aos-delay="200">
       <div class="evento-card">
         <div class="evento-img-container">
-          <img src="https://placehold.co/600x400/1E3A8A/FFFFFF/png?text=Graduación+2022" alt="Graduación 2022">
-          <span class="evento-categoria">Graduaciones</span>
+          <img src="img/15set/IMG-20250917-WA0015.jpg" alt="15 de Septiembre">
+          <span class="evento-categoria">15 de Septiembre</span>
         </div>
         <div class="evento-info">
-          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i> 18 Noviembre, 2022</span></div>
-          <h3>Ceremonia de Graduación 2022</h3>
-          <p>Celebración de la promoción 2022 con familiares, amigos y docentes.</p>
+          <div class="evento-meta"><span><i class="bi bi-calendar-event"></i> 15 Septiembre, 2025</span></div>
+          <h3>Independencia de El Salvador</h3>
+          <p>Celebración patriótica con desfiles, actos cívicos y presentaciones culturales.</p>
           <button class="btn btn-sm btn-outline-primary ver-mas-btn" data-evento="6">Ver más</button>
         </div>
       </div>
     </div>
-  </div>
 </section>
 
-<!-- Modal para el carrusel de imágenes -->
 <div class="modal fade modal-carrusel" id="imagenesModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       <div id="carouselEvento" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" id="carousel-inner">
-          <!-- Las imágenes se insertarán dinámicamente con JavaScript -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvento" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -219,10 +218,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-  // Inicializar AOS
   AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
-
-  // Filtrado de eventos
   document.querySelectorAll('.btn-filter').forEach(button => {
     button.addEventListener('click', function() {
       document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
@@ -238,41 +234,259 @@
     });
   });
 
-  // Base de datos de imágenes para cada evento (en un caso real, esto vendría de una API o base de datos)
+  
   const eventosImagenes = {
     1: [
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Graduación+2023+1",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Graduación+2023+2",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Graduación+2023+3"
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/"
     ],
     2: [
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Día+Alumno+1",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Día+Alumno+2",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Día+Alumno+3"
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/"
     ],
     3: [
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Medio+Ambiente+1",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Medio+Ambiente+2",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Medio+Ambiente+3"
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/"
     ],
     4: [
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Deportes+1",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Deportes+2",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Deportes+3"
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/"
     ],
     5: [
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Cultural+1",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Cultural+2",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Cultural+3"
+ "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/",
+      "img/"
     ],
     6: [
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Graduación+2022+1",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Graduación+2022+2",
-      "https://placehold.co/800x600/1E3A8A/FFFFFF/png?text=Graduación+2022+3"
-    ]
+    "img/15set/IMG-20250917-WA0015.JPG",
+    "img/15set/DSC00138.JPG",
+    "img/15set/DSC00141.JPG",
+    "img/15set/DSC00142.JPG",
+    "img/15set/DSC00144.JPG",
+    "img/15set/DSC00145.JPG",
+    "img/15set/DSC00146.JPG",
+    "img/15set/DSC00147.JPG",
+    "img/15set/DSC00149.JPG",
+    "img/15set/DSC00174.JPG",
+    "img/15set/DSC00175.JPG",
+    "img/15set/DSC00177.JPG",
+    "img/15set/DSC00178.JPG",
+    "img/15set/DSC00183.JPG",
+    "img/15set/DSC00186.JPG",
+    "img/15set/DSC00187.JPG",
+    "img/15set/DSC00188.JPG",
+    "img/15set/DSC00151.JPG",
+    "img/15set/DSC00189.JPG",
+    "img/15set/DSC00153.JPG",
+    "img/15set/DSC00155.JPG",
+    "img/15set/DSC00156.JPG",
+    "img/15set/DSC00157.JPG",
+    "img/15set/DSC00160.JPG",
+    "img/15set/DSC00161.JPG",
+    "img/15set/DSC00162.JPG",
+    "img/15set/DSC00165.JPG",
+    "img/15set/DSC00167.JPG",
+    "img/15set/DSC00169.JPG",
+    "img/15set/DSC00170.JPG",
+    "img/15set/DSC00191.JPG",
+    "img/15set/DSC00192.JPG",
+    "img/15set/DSC00193.JPG",
+    "img/15set/DSC00195.JPG",
+    "img/15set/DSC00196.JPG",
+    "img/15set/DSC00198.JPG",
+    "img/15set/DSC00201.JPG",
+    "img/15set/DSC00202.JPG",
+    "img/15set/DSC00204.JPG",
+    "img/15set/DSC00205.JPG",
+    "img/15set/DSC00206.JPG",
+    "img/15set/DSC00208.JPG",
+    "img/15set/DSC00209.JPG",
+    "img/15set/DSC00211.JPG",
+    "img/15set/DSC00212.JPG",
+    "img/15set/DSC00214.JPG",
+    "img/15set/IMG-20250917-WA0001.JPG",
+    "img/15set/IMG-20250917-WA0002.JPG",
+    "img/15set/IMG-20250917-WA0003.JPG",
+    "img/15set/IMG-20250917-WA0004.JPG",
+    "img/15set/IMG-20250917-WA0006.JPG",
+    "img/15set/IMG-20250917-WA0008.JPG",
+    "img/15set/IMG-20250917-WA0009.JPG",
+    "img/15set/IMG-20250917-WA0011.JPG",
+    "img/15set/IMG-20250917-WA0012.JPG",
+    "img/15set/IMG-20250917-WA0013.JPG",
+    "img/15set/IMG-20250917-WA0014.JPG",
+    "img/15set/IMG-20250917-WA0016.JPG",
+    "img/15set/IMG-20250917-WA0019.JPG",
+    "img/15set/IMG-20250917-WA0020.JPG",
+    "img/15set/IMG-20250917-WA0021.JPG",
+    "img/15set/IMG-20250917-WA0022.JPG",
+    "img/15set/IMG-20250917-WA0023.JPG",
+    "vid/15set/VID-20250917-WA0002.MP4",
+    "vid/15set/VID-20250917-WA0003.MP4",
+    "vid/15set/VID-20250917-WA0004.MP4",
+    "vid/15set/VID-20250917-WA0005.MP4",
+    "vid/15set/VID-20250917-WA0006.MP4",
+    "vid/15set/VID-20250917-WA0007.MP4",
+    "vid/15set/VID-20250917-WA0008.MP4",
+    "vid/15set/VID-20250917-WA0009.MP4"
+    ],
   };
 
-  // Configurar el modal del carrusel al hacer clic en "Ver más"
+
   document.querySelectorAll('.ver-mas-btn').forEach(button => {
     button.addEventListener('click', function() {
       const eventoId = this.getAttribute('data-evento');
@@ -280,11 +494,8 @@
       
       if (!imagenes || imagenes.length === 0) return;
       
-      // Limpiar el carrusel
       const carouselInner = document.getElementById('carousel-inner');
       carouselInner.innerHTML = '';
-      
-      // Añadir imágenes al carrusel
       imagenes.forEach((imagen, index) => {
         const item = document.createElement('div');
         item.className = index === 0 ? 'carousel-item active' : 'carousel-item';
@@ -297,13 +508,23 @@
         item.appendChild(img);
         carouselInner.appendChild(item);
       });
-      
-      // Mostrar el modal
+    
       const modal = new bootstrap.Modal(document.getElementById('imagenesModal'));
       modal.show();
     });
   });
+  document.getElementById('darkModeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    
+    const icon = this.querySelector('i');
+    if (document.body.classList.contains('dark-mode')) {
+      icon.classList.remove('bi-moon-fill');
+      icon.classList.add('bi-sun-fill');
+    } else {
+      icon.classList.remove('bi-sun-fill');
+      icon.classList.add('bi-moon-fill');
+    }
+  });
 </script>
- <script src="scripts.js"></script>
 </body>
 </html>

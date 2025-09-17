@@ -1147,6 +1147,11 @@ body.dark-mode .day:hover:not(.active) {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   background: var(--blanco);
+
+  /* 🔹 Ajuste para que todas tengan el mismo tamaño */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .evento-card:hover {
@@ -1156,6 +1161,7 @@ body.dark-mode .day:hover:not(.active) {
 .evento-img-container {
   position: relative;
   overflow: hidden;
+  height: 200px; /* 🔹 Fija altura de imágenes */
 }
 
 .evento-img-container img {
@@ -1182,6 +1188,10 @@ body.dark-mode .day:hover:not(.active) {
 
 .evento-info {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .evento-meta {
@@ -1220,13 +1230,14 @@ body.dark-mode .day:hover:not(.active) {
   top: 15px;
   right: 15px;
   z-index: 999;
-  background: var(--blanco);
-  opacity: 0.8;
+  background-color: #fff;   
   border-radius: 50%;
+  opacity: 0.9;
+  padding: 0.8rem;
+  filter: invert(0);        
 }
 
-
-
+/* ================== DARK MODE ================== */
 body.dark-mode .hero-eventos .hero-content h1,
 body.dark-mode .hero-eventos .hero-content .lead {
   color: var(--blanco);
@@ -1257,18 +1268,18 @@ body.dark-mode .evento-meta {
 }
 
 body.dark-mode .evento-categoria {
-  background: rgba(230, 194, 41, 0.85); /* Mostaza semitransparente */
+  background: rgba(230, 194, 41, 0.85); 
   color: #000;
 }
 
-/* Modal carrusel en oscuro */
 body.dark-mode .modal-carrusel .modal-content {
   background-color: transparent;
 }
 
 body.dark-mode .modal-carrusel .btn-close {
-  background: #fff;
-  opacity: 0.9;
+
+  opacity: 1;             
+  filter: none;          
 }
 
 
