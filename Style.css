@@ -13,20 +13,17 @@
   --fondo-claro: #ffffff;
   --fondo-oscuro: #121212;
 }
-
-/* Reset para elementos adyacentes */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Asegurar que no hay espacios en el nav */
 .navbar {
   margin-bottom: 0;
 }
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: 0; /* Lo quitamos */
+  padding-top: 0;
   color: var(--texto-claro);
   background-color: var(--fondo-claro);
   transition: all 0.3s ease;
@@ -105,12 +102,12 @@ body.dark-mode .navbar.scrolled {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(rgba(0, 29, 94, 0.7), rgba(26, 117, 210, 0.7));
-  z-index: 0; /* Lo mandamos atrás */
+  z-index: 0; 
 }
 
 .hero-content {
   position: relative;
-  z-index: 1; /* El texto arriba */
+  z-index: 1; 
 }
 
 
@@ -399,10 +396,8 @@ body.dark-mode .card-hover-effect {
 }
 
 body.dark-mode #darkModeToggle i {
-  color: #ffdd33; /* color del sol */
+  color: #ffdd33; 
 }
-
-
 
 /* ESTILOS ESPECÍFICOS PARA NOSOTROS.HTML */
 
@@ -421,7 +416,7 @@ body.dark-mode .bg-azul-oscuro {
 
 
 .hero-nosotros {
-  padding: 140px 20px 100px 20px; /* más espacio arriba, el resto igual */
+  padding: 140px 20px 100px 20px; 
   background-color: var(--azul-claro);
   color: var(--azul-oscuro);
 }
@@ -633,10 +628,6 @@ body.dark-mode .fundador-card .card-title {
   font-size: 2rem;
 }
 
-
-
-
-/* Ajustes específicos para modo oscuro */
 body.dark-mode #historia .section-title {
   color: var(--azul-claro);
 }
@@ -658,9 +649,6 @@ body.dark-mode .quote-card {
   background: #1a2a57;
   color: white;
 }
-
-/* ESTILOS PARA VALORES */
-
 
 .valor-circle {
   text-align: center;
@@ -788,8 +776,6 @@ body.dark-mode .beneficio-card {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-
-
 /* ESTILOS ESPECÍFICOS PARA ADMISIONES */
 
 .hero-admisiones {
@@ -840,7 +826,6 @@ body.dark-mode .requisitos-box h2 {
   color: var(--azul-claro);
 }
 
-/* ESTILOS MEJORADOS PARA LAS PESTAÑAS */
 .requisitos-tabs .nav-tabs {
   border-bottom: 2px solid var(--mostaza);
   margin-bottom: 1.5rem;
@@ -894,7 +879,6 @@ body.dark-mode .requisitos-tabs .nav-link:hover:not(.active) {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* ESTILOS PARA EL CONTENIDO DE LAS PESTAÑAS */
 .tab-content {
   background: white;
   padding: 1.5rem;
@@ -1091,7 +1075,6 @@ body.dark-mode .day:hover:not(.active) {
 
 /* ================== eventos  ================== */
 
-/* ================== HERO ================== */
 .hero-eventos {
   background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-medio) 100%);
   height: 320px;
@@ -1115,14 +1098,13 @@ body.dark-mode .day:hover:not(.active) {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
 }
 
-/* ================== FILTROS ================== */
 .filtros-container {
-  margin: 40px 0; /* 🔹 40px arriba y abajo */
+  margin: 40px 0; 
 }
 
 .filtros-container h3 {
   font-weight: 700;
-  margin-bottom: 20px; /* 🔹 espacio entre el título y los botones */
+  margin-bottom: 20px;
 }
 
 .btn-filter {
@@ -1130,7 +1112,7 @@ body.dark-mode .day:hover:not(.active) {
   background-color: #f0f0f0;
   border: none;
   border-radius: 20px;
-  padding: 8px 20px; /* 🔹 un poco más ancho */
+  padding: 8px 20px;
   transition: all 0.3s ease;
 }
 
@@ -1140,7 +1122,6 @@ body.dark-mode .day:hover:not(.active) {
   color: var(--blanco);
 }
 
-/* ================== EVENTOS ================== */
 .evento-card {
   border-radius: 10px;
   overflow: hidden;
@@ -1148,7 +1129,6 @@ body.dark-mode .day:hover:not(.active) {
   transition: transform 0.3s ease;
   background: var(--blanco);
 
-  /* 🔹 Ajuste para que todas tengan el mismo tamaño */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1161,7 +1141,7 @@ body.dark-mode .day:hover:not(.active) {
 .evento-img-container {
   position: relative;
   overflow: hidden;
-  height: 200px; /* 🔹 Fija altura de imágenes */
+  height: 200px;
 }
 
 .evento-img-container img {
@@ -1204,7 +1184,6 @@ body.dark-mode .day:hover:not(.active) {
   border-radius: 20px;
 }
 
-/* ================== MODAL CARRUSEL ================== */
 .modal-carrusel .modal-dialog {
   max-width: 90%;
   max-height: 90vh;
@@ -1222,8 +1201,25 @@ body.dark-mode .day:hover:not(.active) {
 
 .modal-carrusel .carousel-control-prev,
 .modal-carrusel .carousel-control-next {
-  width: 5%;
+  width: 8%; 
 }
+
+.modal-carrusel .carousel-control-prev-icon,
+.modal-carrusel .carousel-control-next-icon {
+  background-size: 100% 100%;
+  width: 60px;
+  height: 60px;
+  filter: invert(1); 
+}
+
+.modal-carrusel .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M11 1 L4 8 L11 15'/%3E%3C/svg%3E");
+}
+
+.modal-carrusel .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M5 1 L12 8 L5 15'/%3E%3C/svg%3E");
+}
+
 
 .modal-carrusel .btn-close {
   position: absolute;
@@ -1237,14 +1233,12 @@ body.dark-mode .day:hover:not(.active) {
   filter: invert(0);        
 }
 
-/* ================== DARK MODE ================== */
 body.dark-mode .hero-eventos .hero-content h1,
 body.dark-mode .hero-eventos .hero-content .lead {
   color: var(--blanco);
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-/* Filtros en oscuro */
 body.dark-mode .btn-filter {
   background-color: #333;
   color: var(--blanco);
@@ -1256,7 +1250,6 @@ body.dark-mode .btn-filter:hover {
   color: #000;
 }
 
-/* Eventos en oscuro */
 body.dark-mode .evento-card {
   background: #1e1e1e;
   color: var(--blanco);
@@ -1277,14 +1270,30 @@ body.dark-mode .modal-carrusel .modal-content {
 }
 
 body.dark-mode .modal-carrusel .btn-close {
-
   opacity: 1;             
   filter: none;          
 }
 
+body.dark-mode .modal-carrusel .carousel-control-prev-icon,
+body.dark-mode .modal-carrusel .carousel-control-next-icon {
+  filter: none; 
+  background-size: 100% 100%;
+  width: 60px;
+  height: 60px;
+}
+
+body.dark-mode .modal-carrusel .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M11 1 L4 8 L11 15'/%3E%3C/svg%3E");
+}
+
+body.dark-mode .modal-carrusel .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M5 1 L12 8 L5 15'/%3E%3C/svg%3E");
+}
+
+
+
 
 /* ================== contacto ================== */
-
 
 .hero-contacto {
   background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-medio) 100%);
@@ -1505,9 +1514,9 @@ body.dark-mode .card {
    MEDIA QUERIES - DISEÑO RESPONSIVO
    ========================================== */
 
-/* Dispositivos extra pequeños (teléfonos, 576px y menos) */
+
 @media (max-width: 576px) {
-  /* Navbar */
+
   .navbar-brand h1 {
     font-size: 1.4rem;
   }
@@ -1517,7 +1526,7 @@ body.dark-mode .card {
     font-size: 0.9rem;
   }
   
-  /* Hero Sections */
+
   .hero-parallax,
   .hero-nosotros,
   .hero-admisiones,
@@ -1542,7 +1551,7 @@ body.dark-mode .card {
     font-size: 1.1rem !important;
   }
   
-  /* Secciones generales */
+
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -1551,8 +1560,7 @@ body.dark-mode .card {
   .main-section {
     padding: 2rem 0;
   }
-  
-  /* Boxes y grids */
+
   .box {
     height: auto;
     min-height: 250px;
@@ -1572,7 +1580,6 @@ body.dark-mode .card {
     font-size: 1.3rem;
   }
   
-  /* Cards */
   .card-hover-effect,
   .programa-card,
   .evento-card,
@@ -1584,8 +1591,7 @@ body.dark-mode .card {
   .card-img-top {
     height: 180px;
   }
-  
-  /* Historia timeline */
+
   .history-container {
     padding-left: 20px;
   }
@@ -1614,19 +1620,16 @@ body.dark-mode .card {
   .period-content::before {
     display: none;
   }
-  
-  /* Programas */
+
   .programas-header h2 {
     font-size: 2rem;
   }
-  
-  /* Admisiones */
+
   .requisitos-tabs .nav-link {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
-  
-  /* Calendario */
+
   .calendar-weekdays,
   .calendar-days {
     grid-template-columns: repeat(7, 1fr);
@@ -1637,8 +1640,7 @@ body.dark-mode .card {
     height: 35px;
     font-size: 0.8rem;
   }
-  
-  /* Eventos */
+
   .evento-img-container {
     height: 180px;
   }
@@ -1651,8 +1653,7 @@ body.dark-mode .card {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
-  /* Footer */
+
   .footer-mostaza {
     padding: 1.5rem 0;
     text-align: center;
@@ -1662,8 +1663,7 @@ body.dark-mode .card {
     justify-content: center;
     margin-top: 1rem;
   }
-  
-  /* Contacto */
+ 
   .contact-card {
     margin-bottom: 1.5rem;
   }
@@ -1678,4 +1678,93 @@ body.dark-mode .card {
     height: 50px;
     font-size: 1.2rem;
   }
+
+  @media (max-width: 992px) {
+  .modal-carrusel .modal-dialog {
+    max-width: 98%;
+    margin: 0.5rem auto;
+  }
+  
+  .modal-carrusel .carousel-item img {
+    max-height: 70vh;
+  }
+  
+  .modal-carrusel .carousel-control-prev,
+  .modal-carrusel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-carrusel .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  .modal-carrusel .modal-content {
+    border-radius: 0;
+  }
+  
+  .modal-carrusel .carousel-item img {
+    max-height: 60vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .modal-carrusel .carousel-control-prev,
+  .modal-carrusel .carousel-control-next {
+    width: 35px;
+    height: 35px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+  
+  .modal-carrusel .carousel-control-prev {
+    left: 20px;
+  }
+  
+  .modal-carrusel .carousel-control-next {
+    right: 20px;
+  }
+  
+  .modal-carrusel .btn-close {
+    top: 10px;
+    right: 10px;
+    padding: 0.4rem;
+  }
+  
+  .modal-carrusel .carousel-indicators {
+    bottom: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-carrusel .carousel-item img {
+    max-height: 50vh;
+  }
+  
+  .modal-carrusel .carousel-control-prev,
+  .modal-carrusel .carousel-control-next {
+    width: 30px;
+    height: 30px;
+    bottom: 15px;
+  }
+  
+  .modal-carrusel .carousel-control-prev {
+    left: 15px;
+  }
+  
+  .modal-carrusel .carousel-control-next {
+    right: 15px;
+  }
+  
+  .modal-carrusel .btn-close {
+    top: 5px;
+    right: 5px;
+  }
+}
+
 }
