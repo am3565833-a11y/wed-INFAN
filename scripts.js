@@ -76,54 +76,64 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true
+});
 
- AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-      const currentYear = new Date().getFullYear();
-      document.getElementById('current-year').textContent = currentYear;
-      document.getElementById('calendar-year').textContent = currentYear;
-      document.getElementById('footer-year').textContent = currentYear;
-      generateCalendar(currentYear, 10);
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  const currentYear = new Date().getFullYear();
+  document.getElementById('current-year').textContent = currentYear;
+  document.getElementById('calendar-year').textContent = currentYear;
 
-    function generateCalendar(year, month) {
-      const calendarDays = document.getElementById('calendar-days');
-      calendarDays.innerHTML = '';
-  
-      const firstDay = new Date(year, month, 1);
-      const lastDay = new Date(year, month + 1, 0);
-      const daysInMonth = lastDay.getDate();
-      const startingDay = firstDay.getDay();
-      
-      for (let i = 0; i < startingDay; i++) {
-        const emptyDay = document.createElement('div');
-        emptyDay.className = 'empty-day';
-        calendarDays.appendChild(emptyDay);
-      }
-      
 
-      for (let day = 1; day <= daysInMonth; day++) {
-        const dayElement = document.createElement('div');
-        dayElement.className = 'day';
-        dayElement.textContent = day;
-        
-        if (day >= 24 && day <= 29) {
-          dayElement.classList.add('active');
-          dayElement.addEventListener('click', function() {
-            selectDate(day);
-          });
-        }
-        calendarDays.appendChild(dayElement);
-      }
+  generateCalendar(currentYear, 10);
+});
+
+
+function generateCalendar(year, month) {
+  const calendarDays = document.getElementById('calendar-days');
+  calendarDays.innerHTML = '';
+
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const daysInMonth = lastDay.getDate();
+  const startingDay = firstDay.getDay();
+
+
+  for (let i = 0; i < startingDay; i++) {
+    const emptyDay = document.createElement('div');
+    emptyDay.className = 'empty-day';
+    calendarDays.appendChild(emptyDay);
+  }
+
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    dayElement.textContent = day;
+
+    if (day >= 24 && day <= 29) {
+      dayElement.classList.add('active');
+      dayElement.addEventListener('click', function() {
+        selectDate(day, month, year);
+      });
     }
-    
-    function selectDate(day) {
-      const year = new Date().getFullYear();
-      const dateStr = `27 de noviembre de ${year}`; 
-      document.getElementById('selectedDateText').textContent = `Fecha seleccionada: ${dateStr}`;
-      document.getElementById('selectDateBtn').classList.remove('disabled');
-    }
+    calendarDays.appendChild(dayElement);
+  }
+}
+
+
+function selectDate(day, month, year) {
+  const months = [
+    "enero","febrero","marzo","abril","mayo","junio",
+    "julio","agosto","septiembre","octubre","noviembre","diciembre"
+  ];
+
+  const dateStr = `${day} de ${months[month]} de ${year}`;
+  document.getElementById('selectedDateText').textContent = `Fecha seleccionada: ${dateStr}`;
+
+  const btn = document.getElementById('selectDateBtn');
+  if (btn) btn.classList.remove('disabled');
+}
