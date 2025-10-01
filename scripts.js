@@ -1,56 +1,32 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+AOS.init({
+  duration: 800,
+  once: true
+});
 
-  AOS.init({
-    duration: 800,
-    once: true,
-    easing: 'ease-in-out'
-  });
-  
-  gsap.from(".navbar", {duration: 1, y: -100, opacity: 0, ease: "power3.out"});
-  gsap.from(".hero-content h2", {duration: 1, y: 50, opacity: 0, delay: 0.3, ease: "back.out"});
-  gsap.from(".hero-content p", {duration: 1, y: 50, opacity: 0, delay: 0.5, ease: "back.out"});
-  gsap.from(".btn-modern", {duration: 1, y: 50, opacity: 0, delay: 0.7, ease: "back.out"});
-  
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-      document.querySelector('.navbar').classList.add('scrolled');
-    } else {
-      document.querySelector('.navbar').classList.remove('scrolled');
-    }
-  });
-  
-const darkModeToggle = document.getElementById('darkModeToggle');
-const icon = darkModeToggle.querySelector('i');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const body = document.body;
 
-darkModeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  
-  // Animación de giro
-  gsap.to(icon, { rotation: 360, duration: 0.5, ease: "power1.inOut", onComplete: () => {
-    if(document.body.classList.contains('dark-mode')) {
-      icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-    } else {
-      icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
-    }
-    gsap.set(icon, { rotation: 0 }); // reset rotación
-  }});
-  
-  // Guardamos en localStorage
-  if (document.body.classList.contains('dark-mode')) {
-    localStorage.setItem('darkMode', 'enabled');
-  } else {
-    localStorage.setItem('darkMode', 'disabled');
+
+  if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("dark-mode", "enabled");
+      } else {
+        localStorage.setItem("dark-mode", "disabled");
+      }
+    });
   }
 });
 
-// Activar modo oscuro si estaba guardado
-if (localStorage.getItem('darkMode') === 'enabled') {
-  document.body.classList.add('dark-mode');
-  icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-}
-
-});
 
 
 
@@ -137,3 +113,7 @@ function selectDate(day, month, year) {
   const btn = document.getElementById('selectDateBtn');
   if (btn) btn.classList.remove('disabled');
 }
+
+
+
+
